@@ -78,7 +78,7 @@ def recommend(input_movie,pivot_table,n,similar_genre=True):
             continue
         else:
             result.append((title,'{:.2f}'.format(cor),temp_genres))
-    #cor 역정렬
+    #cor 역정렬 -> 상관관계가 높은 순서대로 정렬하기위해
     result.sort(key=lambda r:r[1], reverse=True)
 
     return result[:n]
